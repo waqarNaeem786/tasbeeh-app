@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/bg" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="13dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dial"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="199dp"
+              android:layout_centerInParent="true"
+                app:srcCompat="@drawable/circlewatch" />
+
+            <Button
+                android:id="@+id/scndBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="570dp"
+                android:backgroundTint="#FF243305"
+                android:onClick="nxtFragment"
+                android:text="@string/zikr_btn"
+                android:textColor="#F1EAEA"/>
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="570dp"
+                android:backgroundTint="#FF243305"
+                android:onClick="saveBtn"
+                android:text="@string/save_btn"
+                android:textColor="#FFFFFF"
+ />
+
+
+            <ImageView
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="120dp"
+                android:onClick="forwardImgageClick"
+                app:layout_constraintBottom_toTopOf="@+id/scndBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.256"
+                app:srcCompat="@drawable/group_1"
+                tools:layout_editor_absoluteX="351dp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="120dp"
+                android:onClick="backImageClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageReset"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.297"
+                app:srcCompat="@drawable/group"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <LinearLayout
+                android:layout_width="257dp"
+                android:layout_height="98dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+>
+
+                <TextView
+                    android:id="@+id/tasbeeh_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Alhamdulilah"
+                    android:textSize="33sp" />
+
+                <TextView
+                    android:id="@+id/header_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageVibe"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="470dp"
+                android:onClick="vibeClick"
+                app:srcCompat="@drawable/baseline_vibration_24" />
+
+            <ImageView
+                android:id="@+id/imageReset"
+                android:layout_width="37dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="310dp"
+                android:layout_marginTop="410dp"
+                android:onClick="resetClick"
+                app:srcCompat="@drawable/reset_removebg_preview"/>
+
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="179dp"
+                android:layout_height="162dp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/technology"
+                android:gravity="center"
+                android:onClick="btnCounter"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="66sp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
